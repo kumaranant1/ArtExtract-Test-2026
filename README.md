@@ -1,5 +1,5 @@
 # ArtExtract: (Task 1) Multi-Task Classification & Task 2 (Painting Similarity)
-![thumbnail](assets\thumbnail.jpg)
+![thumbnail](assets/thumbnail.jpg)
 Find notebooks at:
 - Task 1 : 
     - notebook: [click here](task1-CRNN-WikiArt-Classification.ipynb) 
@@ -17,7 +17,9 @@ pip install -r requirements.txt
 
 ### Results:
 ---
-#### Task 1:
+#### Task 1: Multi-Task Classification 
+
+(please refer [notebook](task1-CRNN-WikiArt-Classification.ipynb) for explanation)
 | Architecture | Style (Top-1 / F1) | Artist (Top-1 / F1) | Genre (Top-1 / F1) | Global F1 |
 | :--- | :---: | :---: | :---: | :---: |
 | **ResNet18** (10e Frozen) | 46.48% / 0.3851 | 71.03% / 0.6872 | 71.08% / 0.6575 | 0.5766 |
