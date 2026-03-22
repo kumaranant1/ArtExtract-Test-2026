@@ -1,0 +1,9 @@
+torch
+torchvision
+faiss-gpu-cu12
+pandas
+numpy
+Pillow
+matplotlib
+tqdm
+scikit-learn
