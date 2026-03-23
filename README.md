@@ -1,4 +1,4 @@
-# ArtExtract: (Task 1) Multi-Task Classification & Task 2 (Painting Similarity)
+# ArtExtract: Task 1 (Multi-Task Classification) & Task 2 (Painting Similarity)
 ![thumbnail](assets/thumbnail.jpg)
 Find notebooks at:
 - Task 1 : 
