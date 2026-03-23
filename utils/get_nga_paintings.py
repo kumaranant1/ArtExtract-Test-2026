@@ -23,6 +23,7 @@ def download_image(row, output_dir):
 
     try:
         # NGA IIIF format: Append '/full/!512,512/0/default.jpg' for a smaller version of the painting 
+        # this is to avoid downloading very large images which may not be necessary for us.
         fetch_url = f"{iiif_url}/full/!512,512/0/default.jpg" if not iiif_url.endswith('.jpg') else iiif_url
         
         headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
