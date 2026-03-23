@@ -29,6 +29,7 @@ pip install -r requirements.txt
 *\*Note: The RNN and Multi-Head configurations remained constant across all experiments. (10e = 10 epochs, FT = Fine-Tuned).*
 
 #### Task 2: Painting Similarity
+(please refer [notebook](task2-Painting-Similarity.ipynb) for explanation)
 ![potrait](assets/sim_vis-1.png)
 
 ![canvas](assets/sim_vis-2.png)
