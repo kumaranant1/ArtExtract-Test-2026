@@ -17,7 +17,7 @@ pip install -r requirements.txt
 ```
 ### Task 1:
 ---
-In Task 1, I have used ResNet50 as a feature extractor and then made BiLSTM learn those extracted features, the final extracted hidden state is then used to do the classification for each task by using seperate Linear layers. (please refer [notebook](notebooks/task1-CRNN-WikiArt-Classification.ipynb) for explanation)
+As instructed in Task 1 to use a Convolutional-Recurrent Architecture, I have used ResNet50 as a feature extractor (after removing the final avg pool layer and fully connected layer) and then made BiLSTM learn those extracted features, the final extracted hidden state from BiLSTM is then used to do the classification for each task by using seperate Linear layers. Then I use Two Phase Training where I freeze the CNN layers of ResNet50 and let the BiLSTM + Head layers train itself in the first phase and, in the second phase I Un-freeze the CNN layers and fine-tune the whole network. (please refer [notebook](notebooks/task1-CRNN-WikiArt-Classification.ipynb) for explanation)
 
 To reproduce the results follow the below instructions:
 1. Download the WikiArt Dataset from [official repo](https://github.com/cs-chan/ArtGAN/blob/master/WikiArt%20Dataset/README.md) and extract the downloaded zip file to `data/wikiart` (it must contain all the images)
@@ -29,6 +29,10 @@ python task1_main.py
 ```
 ### Task 2:
 ---
+In Task 2, we are required to find similar paintings based on poses, face, and other several hidden details. Though we could use a typical CNN based architectures like VGG Net, ResNet as done by Soyung in her [repo](https://github.com/PSY222/Painting_similarity_AI) I would like to avoid that and instead use a Vision Transformer (ViT). When dealing with fine art datasets like the National Gallery of Art (NGA) Open Data, standard Convolutional Neural Networks (CNNs) encounter critical limitations that Vision Transformers are naturally equipped to solve. Specifically, CNNs suffer from an inherent texture bias, optimizing for local stylistic artifacts like brushstrokes or medium rather than the actual semantic content. A ViT, by contrast, processes the image globally via patch-based self-attention, naturally prioritizing structural geometry and spatial relationships. This stronger shape bias allows us to map paintings into a latent space where similarity metrics actually correlate with shared poses and facial structures across completely different artistic domains, while the lightweight architecture ensures our vector retrieval remains computationally viable. 
+
+Here are the steps to reproduce the results:
+
 1. Download only paintings from NGA server. Run the following to get the data:
 ```bash
 python utils/get_nga_paintings.py \
@@ -38,7 +42,8 @@ python utils/get_nga_paintings.py \
     --sample_size 5000 \
     --max_threads 30
 ```
-2. Run the following to reproduce the results: 
+
+2. Run the following:
 ```bash
 python task2_main.py
 ``` 
@@ -58,8 +63,6 @@ python task2_main.py
 |🔥**ResNet50 (10e Frozen + 10e FT)** | **59.33%** / **0.5502** | **83.25%** / **0.8179** | **77.06%** / **0.7401** | **0.7027** |
 
 *\*Note: The RNN and Multi-Head configurations remained constant across all experiments. (10e = 10 epochs, FT = Fine-Tuned).*
-
-
 
 #### Task 2: Painting Similarity
 (please refer [notebook](notebooks/task2-Painting-Similarity.ipynb) for explanation of results)
