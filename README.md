@@ -4,10 +4,10 @@ The detailed approach for each task 1 and task 2 is explained inside the corresp
 
 Find notebooks at:
 - Task 1 : 
-    - notebook: [click here](task1-CRNN-WikiArt-Classification.ipynb) 
+    - notebook: [click here](notebooks/task1-CRNN-WikiArt-Classification.ipynb) 
     - pdf: [click here](pdf/task1-CRNN-WikiArt-Classification.pdf)
 - Task 2 : 
-    - notebook: [click here](task2-Painting-Similarity.ipynb) 
+    - notebook: [click here](notebooks/task2-Painting-Similarity.ipynb) 
     - pdf: [click here](pdf/task2-Painting-Similarity.pdf)
 
 Run following to install dependencies:
@@ -16,7 +16,7 @@ pip install -r requirements.txt
 ```
 ### Task 1:
 ---
-In Task 1, I have used ResNet50 as a feature extractor and then made BiLSTM learn those extracted features, the final extracted hidden state is then used to do the classification for each task by using seperate Linear layers. (please refer [notebook](task1-CRNN-WikiArt-Classification.ipynb) for explanation)
+In Task 1, I have used ResNet50 as a feature extractor and then made BiLSTM learn those extracted features, the final extracted hidden state is then used to do the classification for each task by using seperate Linear layers. (please refer [notebook](notebooks/task1-CRNN-WikiArt-Classification.ipynb) for explanation)
 
 To reproduce the results follow the below instructions:
 1. Download the WikiArt Dataset from [official repo](https://github.com/cs-chan/ArtGAN/blob/master/WikiArt%20Dataset/README.md) and extract the downloaded zip file to `data/wikiart` (it must contain all the images)
@@ -46,7 +46,7 @@ python task2_main.py
 ### Results:
 ---
 #### Task 1: Multi-Task Classification 
-(please refer [notebook](task1-CRNN-WikiArt-Classification.ipynb) for explanation of results)
+(please refer [notebook](notebooks/task1-CRNN-WikiArt-Classification.ipynb) for explanation of results)
 
 ![two-phase-train](assets/two-phase-train.png)
 
@@ -60,7 +60,7 @@ python task2_main.py
 
 
 #### Task 2: Painting Similarity
-(please refer [notebook](task2-Painting-Similarity.ipynb) for explanation of results)
+(please refer [notebook](notebooks/task2-Painting-Similarity.ipynb) for explanation of results)
 ![potrait](assets/sim_vis-1.png)
 
 ![canvas](assets/sim_vis-2.png)
