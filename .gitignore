@@ -12,8 +12,6 @@ Thumbs.db
 data/NGA/images/
 *.jpg
 *.jpeg
-*.png
-
 *.pkl
 *.pth
 *.pt
