@@ -47,7 +47,9 @@ python task2_main.py
 ---
 #### Task 1: Multi-Task Classification 
 (please refer [notebook](task1-CRNN-WikiArt-Classification.ipynb) for explanation of results)
+
 ![two-phase-train](assets/two-phase-train.png)
+
 | Architecture | Style (Top-1 / F1) | Artist (Top-1 / F1) | Genre (Top-1 / F1) | Global F1 |
 | :--- | :---: | :---: | :---: | :---: |
 | ResNet18 (10e Frozen) | 46.48% / 0.3851 | 71.03% / 0.6872 | 71.08% / 0.6575 | 0.5766 |
