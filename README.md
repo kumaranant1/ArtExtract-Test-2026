@@ -1,6 +1,5 @@
 # ArtExtract: Task 1 (Multi-Task Classification) & Task 2 (Painting Similarity)
 ![thumbnail](assets/thumbnail.jpg)
-The detailed approach for each task 1 and task 2 is explained inside the corresponding notebooks.
 
 The detailed approach for each task 1 and task 2 is explained inside the corresponding notebooks.
 
