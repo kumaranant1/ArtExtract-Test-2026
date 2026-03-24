@@ -2,6 +2,8 @@
 ![thumbnail](assets/thumbnail.jpg)
 The detailed approach for each task 1 and task 2 is explained inside the corresponding notebooks.
 
+The detailed approach for each task 1 and task 2 is explained inside the corresponding notebooks.
+
 Find notebooks at:
 - Task 1 : 
     - notebook: [click here](notebooks/task1-CRNN-WikiArt-Classification.ipynb) 
@@ -55,8 +57,10 @@ python task2_main.py
 | ResNet18 (10e Frozen) | 46.48% / 0.3851 | 71.03% / 0.6872 | 71.08% / 0.6575 | 0.5766 |
 | ResNet50 (10e Frozen) | 54.65% / 0.4799 | 79.21% / 0.7746 | 74.96% / 0.7096 | 0.6547 |
 | 🔥 **ResNet50 (10e Frozen + 10e FT)** | **59.33%** / **0.5502** | **83.25%** / **0.8179** | **77.06%** / **0.7401** | **0.7027** |
+| 🔥 **ResNet50 (10e Frozen + 10e FT)** | **59.33%** / **0.5502** | **83.25%** / **0.8179** | **77.06%** / **0.7401** | **0.7027** |
 
 *\*Note: The RNN and Multi-Head configurations remained constant across all experiments. (10e = 10 epochs, FT = Fine-Tuned).*
+
 
 
 #### Task 2: Painting Similarity
